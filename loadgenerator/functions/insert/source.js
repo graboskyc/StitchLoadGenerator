@@ -5,6 +5,7 @@ exports = function(){
   // https://gist.github.com/ruanbekker/a1506f06aa1df06c5a9501cb393626ea
   var names = context.values.get("names"); 
   var states = context.values.get("states");
+  var colors = context.values.get("colors");
   
   // do 10 random inserts
   
@@ -15,6 +16,8 @@ exports = function(){
     obj.customerName = names[Math.floor(Math.random() * names.length)];
     obj.accountBalanceCents = Math.floor((Math.random() * 10000000) + 1);
     obj.state = states[Math.floor(Math.random() * states.length)];
+    obj.favoriteColor = colors[Math.floor(Math.random() * colors.length)];
+    obj.created = new Date();
     conn.insertOne(obj);
     i++;
   }

@@ -3,7 +3,7 @@
     "name": "runReads",
     "type": "SCHEDULED",
     "config": {
-        "schedule": "*/12 * * * *"
+        "schedule": "*/4 * * * *"
     },
     "function_name": "read",
     "disabled": false
