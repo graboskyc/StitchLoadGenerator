@@ -6,7 +6,7 @@ exports = async function(){
   
   var i = 0;
   while(i< 100) {
-    var state = states[Math.floor(Math.random() * names.states)];
+    var state = states[Math.floor(Math.random() * states.length)];
     var docs = await conn.findOne({"state":state});
     i++;
   }

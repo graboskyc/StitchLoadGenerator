@@ -14,7 +14,7 @@ exports = function(){
     obj.pad = Array(65537).join('a');
     obj.customerName = names[Math.floor(Math.random() * names.length)];
     obj.accountBalanceCents = Math.floor((Math.random() * 10000000) + 1);
-    obj.state = states[Math.floor(Math.random() * names.states)];
+    obj.state = states[Math.floor(Math.random() * states.length)];
     conn.insertOne(obj);
     i++;
   }
