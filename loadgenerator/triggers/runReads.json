@@ -1,0 +1,10 @@
+{
+    "id": "5e39b7803e1aee167e38df34",
+    "name": "runReads",
+    "type": "SCHEDULED",
+    "config": {
+        "schedule": "*/12 * * * *"
+    },
+    "function_name": "read",
+    "disabled": false
+}

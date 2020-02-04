@@ -1,0 +1,10 @@
+{
+    "id": "5e39b6745d0fa079cb158967",
+    "name": "runInserts",
+    "type": "SCHEDULED",
+    "config": {
+        "schedule": "*/10 * * * *"
+    },
+    "function_name": "insert",
+    "disabled": false
+}
