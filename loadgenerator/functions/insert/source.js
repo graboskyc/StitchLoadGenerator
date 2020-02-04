@@ -1,3 +1,13 @@
+function generate_random_string(string_length){
+    let random_string = '';
+    let random_ascii;
+    for(let i = 0; i < string_length; i++) {
+        random_ascii = Math.floor((Math.random() * 25) + 97);
+        random_string += String.fromCharCode(random_ascii)
+    }
+    return random_string
+}
+
 exports = function(){
   var conn = context.services.get("mongodb-atlas").db("metrics").collection("customers");
   
@@ -7,10 +17,8 @@ exports = function(){
   var states = context.values.get("states");
   var colors = context.values.get("colors");
   
-  // do 10 random inserts
-  
   var i = 0;
-  while(i< 30) {
+  while(i< 100) {
     var obj = {};
     obj.pad = Array(65537).join('a');
     obj.customerName = names[Math.floor(Math.random() * names.length)];
@@ -18,6 +26,9 @@ exports = function(){
     obj.state = states[Math.floor(Math.random() * states.length)];
     obj.favoriteColor = colors[Math.floor(Math.random() * colors.length)];
     obj.created = new Date();
+    obj.randomFirst = generate_random_string(10);
+    obj.randomSecond = generate_random_string(5);
+    obj.randomThird = generate_random_string(7);
     conn.insertOne(obj);
     i++;
   }
