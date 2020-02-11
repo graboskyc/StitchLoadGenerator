@@ -1,0 +1,10 @@
+{
+    "id": "5e4192c08cef4b3400d72014",
+    "name": "read_mflix",
+    "type": "SCHEDULED",
+    "config": {
+        "schedule": "*/30 * * * *"
+    },
+    "function_name": "read_mflix",
+    "disabled": false
+}
